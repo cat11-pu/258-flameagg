@@ -1,0 +1,17 @@
+{
+  "budget": 2,
+  "depth_limit": 4,
+  "duplicate_error_code": "E_DUPLICATE_SAMPLE",
+  "depth_error_code": "E_DEPTH_LIMIT",
+  "pending_error_code": "E_NOT_PENDING",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "tree": {}, "pending": [], "merged": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "sample", "sample": "S1", "stack": ["main", "parse", "lex"], "count": 3 },
+    { "id": 2, "kind": "sample", "sample": "S2", "stack": ["main", "parse", "lex"], "count": 2 },
+    { "id": 3, "kind": "sample", "sample": "S3", "stack": ["main", "io"], "count": 4 },
+    { "id": 4, "kind": "sample", "sample": "S4", "stack": ["main", "parse"], "count": 1 },
+    { "id": 5, "kind": "sample", "sample": "S5", "stack": ["main", "io"], "count": 2 },
+    { "id": 6, "kind": "drop", "sample": "S5" }
+  ]
+}

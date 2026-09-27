@@ -1,8 +1,15 @@
-// frames.js：路径前缀与栈深（基线：一律给空表与零）
+// frames.js：路径前缀与栈深
 export function pathsOf(stack) {
-  return [];
+  const frames = Array.isArray(stack) ? stack : [];
+  const paths = [];
+  let prefix = "";
+  for (const frame of frames) {
+    prefix = prefix === "" ? String(frame) : prefix + "/" + String(frame);
+    paths.push(prefix);
+  }
+  return paths;
 }
 
 export function depthOf(stack) {
-  return 0;
+  return Array.isArray(stack) ? stack.length : 0;
 }
